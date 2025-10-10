@@ -23,7 +23,8 @@ jobs:
         run: pylint src/
 
       - name: Run unit tests
-         run: PYTHONPATH=. pytest --junitxml=test-results.xml
+        run: pytest --junitxml=test-results.xml
+
 
       - name: Run security scan
         uses: github/codeql-action/analyze@v3
