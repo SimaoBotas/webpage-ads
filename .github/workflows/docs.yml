@@ -9,12 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Build documentation
         run: |
           pip install pdoc
-          pdoc --html . --output-dir docs
+          # gera docs HTML dentro da pasta docs
+          pdoc -o docs src
+
       - name: Upload documentation
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs
-
