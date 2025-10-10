@@ -10,5 +10,3 @@ soma dos mambos
 
 """
     return a + b
-
-
